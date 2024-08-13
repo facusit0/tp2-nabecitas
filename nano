@@ -1,0 +1,65 @@
+public class Howard extends PilotoBase {
+    void probarNave(NaveDeAtaque nave) {
+        subirse(nave);
+        nave.encenderMotores();
+        nave.avanzarHacia(Direccion.NORTE);
+        nave.avanzarHacia(Direccion.SUR);
+        nave.avanzarHacia(Direccion.SUR);
+        nave.avanzarHacia(Direccion.NORTE);
+        nave.apagarMotores();
+        bajarse();
+    }
+
+    void mision04(NaveDeAtaque nave){
+        subirse(nave);
+        nave.encenderMotores();
+        nave.avanzarHacia(Direccion.OESTE);
+        nave.atacarHacia(Direccion.OESTE);
+        nave.atacarHacia(Direccion.OESTE);
+        nave.atacarHacia(Direccion.OESTE);
+        nave.avanzarHacia(Direccion.OESTE);
+        nave.avanzarHacia(Direccion.OESTE);
+        nave.apagarMotores();
+        bajarse();
+
+    }
+
+    void mision05(NaveDeAtaque nave){
+        subirse(nave);
+        nave.encenderMotores();
+        nave.avanzarHacia(Direccion.NORTE);
+        nave.avanzarHacia(Direccion.NORTE);
+        bajarse();
+        
+    }
+    
+    void mision06(NaveDeAtaque nave){
+        subirse(nave);
+        nave.encenderMotores();
+        nave.avanzarHacia(Direccion.NORTE);
+        nave.avanzarHacia(Direccion.NORTE);
+        nave.atacarHacia(Direccion.NORTE);
+        nave.atacarHacia(Direccion.NORTE);
+        nave.atacarHacia(Direccion.NORTE);
+        bajarse();
+        
+    }
+    
+    void mision07(NaveDeAtaque nave){
+        mision06(nave);
+        subirse(nave);
+        nave.avanzarHacia(Direccion.NORTE);
+        nave.avanzarHacia(Direccion.NORTE);
+        bajarse();
+    }
+    
+    void mision08(NaveDeAtaque nave){
+        mision05(nave);
+        //hola mision06(nave);
+        mision07(nave);
+    }
+    
+    void mision09(NaveDeAtaque nave){
+        
+    }
+}
